@@ -19,3 +19,4 @@ Route::get('/', function () {
 Route::post('/login','App\Http\Controllers\LoginController@authenticate');
 Route::get('/user/register','App\Http\Controllers\RegisterController@showForm');
 Route::post('/user/register','App\Http\Controllers\RegisterController@store');
+Route::get('/logout','App\Http\Controllers\LoginController@logout');
