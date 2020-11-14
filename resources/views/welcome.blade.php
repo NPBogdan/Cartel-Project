@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>The Cartel</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -41,21 +42,12 @@
             right: 10px;
             top: 18px;
         }
-        .content {
-            text-align: center;
+        a {
+            margin-left: 20px;
         }
         .title {
             font-size: 84px;
             font-family: 'Red Rose', cursive;
-        }
-        .links > a {
-            color: #1b262c;
-            padding: 0 25px;
-            font-size: 27px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
         }
         .m-b-md {
             margin-bottom: 30px;
@@ -63,16 +55,16 @@
         }
         /* Style all font awesome icons */
         .fa {
-            padding: 18px;
+            padding: 20px;
             font-size: 30px;
-            width: 55px;
+            width: 70px;
             text-align: center;
-            text-decoration: none;border-radius: 100%;
+            border-radius: 100%;
 
         }
         /* Add a hover effect if you want */
         .fa:hover {
-            opacity: 0.6;
+            opacity: 0.2;
         }
         /* Set a specific color for each brand */
         .fa-facebook {
@@ -99,15 +91,14 @@
         <!--Register and login links-->
         <div class="top-right links">
             @guest
-                <a href="/login">Log in</a>
-                <a href="/user/register">Create an account</a>
+                <a class="btn btn-dark" href="/login">Log in</a>
+                <a class="btn btn-dark" href="/user/register">Create an account</a>
             @endguest
             @auth
-                <a href="/map">Go to map!</a>
-                <a href="/logout">Log Out</a>
+                <a class="btn btn-dark" href="/map">Go to map!</a>
+                <a class="btn btn-dark" href="/logout">Log Out</a>
             @endauth
         </div>
-
 
         <div class="title m-b-md mx-auto">
             Welcome!
