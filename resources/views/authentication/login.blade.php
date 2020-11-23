@@ -9,20 +9,18 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
-
-<main>
-    <div class="text-center">
-        <form method="post" action="/login">
-            {{ csrf_field() }}
-            <label for="email">Email</label>
-            <input type="email" class="text-primary" name="email">
-            <br>
-            <label for="password">Parola</label>
-            <input type="password" class="text-primary" name="password">
-            <input type="submit" value="Log In">
-        </form>
-    </div>
-</main>
-
+    <main>
+        <div class="text-center">
+            <form method="post" action="/login">
+                {{ csrf_field() }}
+                <label for="email">Email</label>
+                <input type="email" class="text-primary" name="email">
+                <br>
+                <label for="password">Parola</label>
+                <input type="password" class="text-primary" name="password">
+                <input type="submit" value="Log In">
+            </form>
+        </div>
+    </main>
 </body>
 </html>
