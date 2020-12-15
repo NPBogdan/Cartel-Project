@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\LoginUser;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
@@ -12,14 +12,14 @@ class LoginController extends Controller
         return view('authentication.login');
     }
 
-    public function authenticate(Request $request){
+    public function authenticate(LoginUser $request){
         $credentials = $request->only('email','password');
-        if(Auth::attempt($credentials)){
+        $remember = $request->has("rememberMe");
+        if(Auth::attempt($credentials,$remember)) {
             //Auth correct
             return redirect()->intended('/map');
-        } else {
-            echo 'Something is wrong!';
         }
+        return redirect("/login");
     }
 
     public function logout(){
