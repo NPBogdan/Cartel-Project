@@ -17,9 +17,8 @@ class LoginController extends Controller
         if(Auth::attempt($credentials)){
             //Auth correct
             return redirect()->intended('/map');
-        } else {
-            echo 'Something is wrong!';
         }
+        return redirect('/login');
     }
 
     public function logout(){
