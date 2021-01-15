@@ -19420,8 +19420,9 @@ function initMap() {
       var afisareaLatLng = "\n            <ul>\n                <li>".concat(lat, "</li>\n                <li>").concat(lng, "</li>\n            </ul>\n            "); //Formated address
 
       var formatedAddressField = response.data.results[0].formatted_address;
-      var displayFormatedAddress = "\n            <ul>\n                <li> ".concat(formatedAddressField, "</li>\n            </ul>\n            "); //Display on the screen
+      var displayFormatedAddress = "\n                <p>".concat(formatedAddressField, "</p>\n            "); //Display on the screen
 
+      document.getElementById('city').value = location;
       document.getElementById('formatedAddress').innerHTML = displayFormatedAddress;
       document.getElementById('position').innerHTML = afisareaLatLng; //Center the map where the user put it
 

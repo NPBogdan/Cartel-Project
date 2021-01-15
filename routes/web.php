@@ -23,4 +23,5 @@ Route::post('/user/register','App\Http\Controllers\RegisterController@store');
 Route::get('/logout','App\Http\Controllers\LoginController@logout');
 
 Route::get('/map','App\Http\Controllers\MapController@index');
+Route::resource("/post","App\Http\Controllers\PostController");
 

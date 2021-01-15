@@ -14,8 +14,12 @@ class ModifyUsersEmailVerifiedAtColumn extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('email_verified_at')->default(0)->nullable();
-            $table->string('birthday')->nullable();
+            $table->integer('email_verified_at')->default(0)->nullable()->change();
+            $table->renameColumn('age', 'birthday');
+        });
+
+        Schema::table('users', function (Blueprint $table) {
+            $table->date('birthday')->nullable()->change();
         });
     }
 
