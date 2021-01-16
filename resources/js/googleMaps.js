@@ -34,11 +34,11 @@ function initMap() {
             //Formated address
             var formatedAddressField = response.data.results[0].formatted_address;
             var displayFormatedAddress = `
-            <ul>
-                <li> ${formatedAddressField}</li>
-            </ul>
+                <p>${formatedAddressField}</p>
             `;
+
             //Display on the screen
+            document.getElementById('city').value = location;
             document.getElementById('formatedAddress').innerHTML = displayFormatedAddress;
             document.getElementById('position').innerHTML = afisareaLatLng;
             //Center the map where the user put it
